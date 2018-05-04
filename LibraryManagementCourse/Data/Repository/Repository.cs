@@ -10,16 +10,10 @@ namespace LibraryManagementCourse.Data.Repository
     public class Repository<T> : IRepository<T> where T : class
     {
         protected readonly LibraryDbContext _context;
-        private CustomerRepository.LibraryDbContext context;
 
         public Repository(LibraryDbContext context)
         {
             _context = context;
-        }
-
-        public Repository(CustomerRepository.LibraryDbContext context)
-        {
-            this.context = context;
         }
 
         protected void Save() => _context.SaveChanges();
