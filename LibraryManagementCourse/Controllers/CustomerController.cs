@@ -19,6 +19,7 @@ namespace LibraryManagementCourse.Controllers
             _customerRepository = customerRepository;
             _bookRepository = bookRepository;
         }
+
         [Route("Customer")]
         public IActionResult List()
         {
